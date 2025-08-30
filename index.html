@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Using Javascript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Strategic Chess AI Dashboard</h1>
+    <div class="game-controls">
+        <button id="ai-mode-btn">🤖 Play vs Bot</button>
+        <button id="human-mode-btn">👥 Human vs Human</button>
+        <select id="difficulty-select">
+            <option value="easy">🔰 Beginner</option>
+            <option value="medium" selected>⚡ Master</option>
+            <option value="hard">🧠 Grandmaster</option>
+        </select>
+        <button id="reset-btn">🔄 Reset Game</button>
+        <div class="ai-controls">
+            <button id="suggest-move-btn">💡 Suggestions</button>
+            <div id="ai-thinking" class="thinking-indicator">🤔 Thinking...</div>
+        </div>
+    </div>
+    <div id="gameboard"></div>
+    <div class="bars">
+        <p class="turnbar">It Is <span id="player"></span>'s Turn.</p>
+        <div class="game-info">
+            <p class="infobar" id="info-display"></p>
+            <p class="errbar" id="err"></p>
+            <p class="ai-status" id="ai-status"></p>
+            <div class="move-history">
+                <h3>Move History</h3>
+                <div id="move-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="pieces.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
